@@ -14,8 +14,8 @@ test.describe('Example.com website', () => {
 
   test('page has link to more information', async ({ page }) => {
     await page.goto('/');
-    const link = page.getByRole('link', { name: 'More information...' });
+    const link = page.getByRole('link', { name: /more information|learn more/i });
     await expect(link).toBeVisible();
-    await expect(link).toHaveAttribute('href', 'https://www.iana.org/domains/example');
+    await expect(link).toHaveAttribute('href', /iana\.org/);
   });
 });

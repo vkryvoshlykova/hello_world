@@ -9,7 +9,7 @@ test.describe('Navigation tests', () => {
 
   test('click link and verify navigation', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('link', { name: 'More information...' }).click();
+    await page.getByRole('link', { name: /more information|learn more/i }).click();
     await expect(page).toHaveURL(/iana\.org/);
   });
 

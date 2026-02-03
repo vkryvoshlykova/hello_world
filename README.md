@@ -22,11 +22,18 @@ npm run test:debug       # run in debug mode
 npm run report           # open last HTML report
 ```
 
+### Run one browser (faster)
+
+```bash
+npm run test:chromium      # run only in Chromium
+```
+
 ### Test files
 
 - **tests/example.spec.js** – example.com: title, heading, link checks
 - **tests/navigation.spec.js** – navigation and URL checks
-- **tests/demo-playwright.spec.js** – Todo app on demo.playwright.dev (add/complete/filter)
+- **tests/assertions.spec.js** – visibility, text, count assertions
+- **tests/demo-playwright.spec.js** – Todo app: add, complete, filter, count, clear, delete
 
 ### Your website
 
